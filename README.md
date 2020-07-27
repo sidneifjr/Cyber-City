@@ -1,10 +1,6 @@
 # Cyber City
 
-Feito com Docker, CSS Grid Layout, SASS, ES6 e Typescript.
-
-## Com Docker
-
-Ideal para Parcel, apresenta menos problemas.
+Feito com Docker, SASS e ES6/Typescript.
 
 1) Rode **docker-compose up**, antes de tudo. Irá retornar um erro, relacionado ao npm.
 
@@ -12,7 +8,7 @@ Ideal para Parcel, apresenta menos problemas.
 
 2) Finalmente, **docker-compose up**.
 
-- Produção
+## Produção
 
 Se o Docker estiver rodando: **docker-compose exec node npm run build**.
 Caso contrário: **docker-compose run node npm run build**.
