@@ -1,0 +1,52 @@
+button {
+    letter-spacing: -0.01em;
+    text-transform: uppercase;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background ease-in-out 0.2s;
+
+    &.main,
+    &.sub {
+        width: 100%;
+        max-width: 120px;
+        padding: 15px 25px;
+    }
+
+    &.main {
+        background: #64121e;
+        color: $white;
+
+        &:hover {
+            background: lighten(#64121e, 5%);
+        }
+    }
+
+    &.sub {
+        border: solid 1px #ccc;
+        background: $white;
+
+        &:hover {
+            background: darken($white, 5%);
+        }
+    }
+}
+
+.show-more {
+    font-weight: bold;
+    background: $white;
+    color: $black;
+    border: solid 2px #000;
+    border-radius: 50px;
+    padding: 12px 25px 12px 40px;
+    position: absolute;
+    left: 50%;
+    bottom: -50px;
+    transform: translate3d(-50%, 0, 0);
+    opacity: 0;
+    transition: opacity ease-in-out 0.2s;
+    display: inline-block;
+
+    &.visible {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,80 @@
+.modalBtn {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 28px;
+    font-weight: bold;
+    background: #64121e;
+    color: $white;
+    border-radius: 50%;
+    padding: 10px 20px;
+    position: fixed;
+    right: 40px;
+    bottom: 20px;
+    display: inline-block;
+    transition: background ease-in-out 0.2s;
+
+    &:hover {
+        background: lighten(#64121e, 10%);
+    }
+}
+
+.modal-wrapper {
+    // background:rgba(54, 54, 54, 0.7);
+    background-image: linear-gradient(180deg, rgba(100, 18, 30, 0.4), rgba(95, 12, 25, 0.4));
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity ease-in-out 0.2s, visibility ease-in-out 0.2s;
+    z-index: -1;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        z-index: 99;
+    }
+}
+
+.modal {
+    height: 700px;
+    max-width: 900px;
+    flex: 1;
+    display: flex;
+
+    &-image,
+    &-content {
+        flex-basis: 50%;
+    }
+
+    &-image {
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &-content {
+        background: $white;
+        display: flex;
+
+        form {
+            flex: 1;
+            padding: 40px;
+        }
+
+        h3 {
+            font-size: 28px;
+            line-height: 35px;
+            font-weight: normal;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+}

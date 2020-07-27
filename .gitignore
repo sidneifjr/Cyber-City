@@ -1,0 +1,11 @@
+#vagrant folder
+/.vagrant
+
+### VisualStudioCode ###
+.vscode/*
+
+## Front ##
+.cache
+.dist
+build
+node_modules

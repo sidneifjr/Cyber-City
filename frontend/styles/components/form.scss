@@ -1,0 +1,33 @@
+form {
+    .input-field {
+        position: relative;
+        display: flex;
+
+        &:not(:last-child){
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: bold;
+            color: #64121e;
+            position: absolute;
+            top: 7px;
+            left: 7px;
+            opacity: 0.7;
+        }
+
+        input {
+            border: solid 1px #64121e;
+            border-radius: 2px;
+            flex: 1;
+            padding: 25px 7px 10px;
+        }
+    }
+
+    .form-btn {
+        margin-top: 40px;
+        display: flex;
+        justify-content: space-between;
+    }
+}

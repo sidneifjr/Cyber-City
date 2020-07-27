@@ -1,0 +1,42 @@
+#footer {
+    width: 100%;
+    background: $grey;
+    padding: 40px;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    grid-area: footer;
+
+    img {
+        border-radius: 50%;
+    }
+
+    .footer {
+        &-content {
+            margin-left: 25px;
+
+            h4 {
+                margin-bottom: 10px;
+            }
+
+            p {
+                max-width: 320px;
+            }
+        }
+    }
+
+    .goTop {
+        font-size: 21px;
+        line-height: 16px;
+        font-weight: bold;
+        color: $white;
+        background: $black;
+        padding: 10px 15px;
+        position: absolute;
+        top: 0;
+        right: 40px;
+        display: flex;
+    }
+}

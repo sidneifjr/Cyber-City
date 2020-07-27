@@ -1,0 +1,144 @@
+.loader {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(180deg, #64121e, #5F0C19);
+    // background: #390C2B;
+    // background: #FE4148;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 999;
+
+    .loader-img {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        &-border {
+            width: 200px;
+            height: 200px;
+            border: 6px solid #f3f3f3;
+            border-top: 6px solid #5F0C19;
+            border-bottom: 6px solid #5F0C19;
+            border-radius: 50%;
+            z-index: 1;
+            animation: spin 2s linear infinite;
+        }
+
+        img {
+            max-width: 80px;
+            position: absolute;
+            left: 50%;
+            transform: translate3d(-50%,0,0);
+            display: block;
+            // animation: loading 5s;
+            // animation-fill-mode: forwards;
+            // animation-iteration-count: infinite;
+        }
+    }
+
+    .animate-bottom {
+        position: relative;
+        animation-name: animateBottom;
+        animation-duration: 1s;
+    }
+
+    &.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+
+        img {
+            animation-iteration-count: 0;
+        }
+    }
+
+    blockquote {
+        color: $white;
+        position: relative;
+        margin: 40px 0 0 0;
+
+        p {
+            font-family: "Montserrat", sans-serif;
+            font-size: 24px;
+            line-height: 27px;
+
+            small {
+                font-size: 18px;
+                font-weight: bold;
+                text-align: right;
+                margin-top: 20px;
+                margin-right: -60px;
+                display: block;
+            }
+        }
+    }
+
+    span {
+        font-size: 21px;
+        line-height: 24px;
+        color: $white;
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loading {
+    0% {
+        max-width: 80px;
+    }
+
+    25% {
+        max-width: 90px;
+    }
+
+    50% {
+        max-width: 80px;
+    }
+
+    75% {
+        max-width: 90px;
+    }
+
+    100% {
+        max-width: 80px;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        border-top-color: #64121e;
+        border-bottom-color: #64121e;
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animateBottom {
+    0% {
+        bottom: -100px;
+        opacity: 0;
+    }
+
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}

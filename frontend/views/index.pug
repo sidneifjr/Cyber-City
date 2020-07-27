@@ -1,0 +1,192 @@
+include ./includes/head
+
+body
+    include ./includes/header
+
+    .loader
+        .loader-img
+            .loader-img-border
+
+            img(src="../images/alienware-white.svg" alt="Loader")
+
+        blockquote
+            p "Let's have a toast, a celebration and get a glass out, we can do this until we pass out."
+                small <i>Pass Out</i>, Tinie Tempah
+
+        span CyberCity, 2020.
+    
+    .categories
+        button.categories-button ||||
+
+        .categories-list
+            a.categories-list-item.active(href="#")
+                i.fas.fa-film
+                p Movies
+
+            a.categories-list-item(href="#")
+                i.fas.fa-gamepad
+                p Gaming
+
+            a.categories-list-item(href="#")
+                i.fas.fa-search
+                p Others
+
+    section.content
+        .photo-grid-wrapper
+            .photo-grid
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/dark-souls.png", alt="Dark Souls")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Dark Souls
+                            p FromSoftware
+
+                        .sub
+                            p Action RPG
+                            P 2011
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/the-witcher-3.jpg", alt="The Witcher III")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 The Witcher III: Wild Hunt
+                            p CD Projekt Red
+
+                        .sub
+                            p Action RPG
+                            P 2015
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/castlevania.jpg", alt="Castlevania")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Castlevania
+                            p Konami
+
+                        .sub
+                            p Action/Adventure
+                            P 1986-2014
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/dark-souls-3.jpg", alt="Dark Souls III")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Dark Souls III
+                            p FromSoftware
+
+                        .sub
+                            p Action RPG
+                            P 2016
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/resident-evil-2-remake.jpg", alt="Resident Evil 2")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Resident Evil 2 (Remake)
+                            p Capcom
+
+                        .sub
+                            p Survival Horror
+                            P 2019
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/doom-2016.jpg", alt="DOOM (2016)")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 DOOM (2016)
+                            p ID Software
+
+                        .sub
+                            p Survival Horror invertido
+                            P 2016
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/borderlands-2.jpg", alt="Borderlands 2")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Borderlands 2
+                            p Gearbox Software
+
+                        .sub
+                            p FPS
+                            P 2012
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/dying-light-2.jpg", alt="Dying Light 2")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Dying Light 2
+                            p Techland
+
+                        .sub
+                            p FPS/Horror
+                            P TBA
+
+                .photo-grid-item
+                    .glitch
+                        img(src="../images/cyberpunk-2077.jpg", alt="Cyberpunk 2077")
+
+                    .photo-grid-item-info
+                        .main
+                            h4 Cyberpunk 2077
+                            p CD Projekt Red
+
+                        .sub
+                            p FPS
+                            P TBA
+
+                a.show-more(href="#") Show More
+                a.modalBtn(href="#") +
+
+    .modal-wrapper
+        .modal
+            .modal-image
+                img(src="../images/HER-2.jpg", alt="")
+
+            .modal-content
+                form(action="")
+                    h3 Adicionar item
+
+                    .input-field
+                        label Nome
+                        input(type="text" name="name")
+
+                    .input-field
+                        label Desenvolvedor
+                        input(type="text" name="developer")
+
+                    .input-field
+                        label Gênero
+                        input(type="text" name="genre")
+
+                    .input-field
+                        label Ano de lançamento
+                        input(type="text" name="releaseDate")
+
+                    .input-field
+                        label Imagem (URL)
+                        input(type="text" name="image")
+
+                    .form-btn
+                        button.btn.sub(type="reset") Cancelar
+                        button.btn.main(type="submit") Enviar
+
+        //- include ./includes/footer
+
+    include ./includes/scripts
