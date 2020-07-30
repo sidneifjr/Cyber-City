@@ -10,6 +10,7 @@
     "@babel/core": "^7.8.7",
     "@babel/preset-react": "^7.8.3",
     "cssnano": "^4.1.10",
+    "gh-pages": "^3.1.0",
     "parcel": "latest",
     "pug": "^2.0.4",
     "sass": "^1.26.3",
@@ -25,6 +26,7 @@
     "font-awesome": "^4.7.0",
     "hamburgers": "^1.1.3",
     "is-expression": "^3.0.0",
+    "parcel-bundler": "^1.12.4",
     "parcel-plugin-custom-dist-structure": "^1.1.14",
     "uglify-js": "^3.8.0",
     "with": "^6.0.0"
@@ -32,7 +34,9 @@
   "scripts": {
     "dev": "parcel frontend/views/index.pug --port 9000 --hmr-port 1235 --out-dir .dist --cache-dir frontend/.cache",
     "devopen": "parcel frontend/views/index.pug --open 'google chrome'",
-    "build": "parcel build frontend/views/index.pug --no-content-hash --out-dir build --public-url ./"
+    "build": "parcel build frontend/views/index.pug --no-content-hash --out-dir build --public-url ./",
+    "predeploy": "parcel build frontend/views/index.pug --no-content-hash --out-dir build --public-url ./",
+    "deploy": "gh-pages -d build"
   },
   "customDistStructure": {
     "config": {

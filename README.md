@@ -21,6 +21,9 @@ Caso contrário: **docker-compose run node npm run build**.
 
 - Caso surja um erro no console relacionado a WebSocket, aponte o arquivo de entrada junto da opção **--no-hmr**.
 
+- gh-pages é usado para automatizar o deploy. No entanto, o mesmo não interage bem com Docker, então é recomendável rodá-lo se as dependências estiverem instaladas na máquina local.
+Pretendo buscar outras soluções.
+
 ## Solução de erros
 
 - 'css-loader.js' não encontrado: delete as pastas '.cache' e 'dist', levante novamente. Caso não resolva, remova 'node_modules' e reinstale.

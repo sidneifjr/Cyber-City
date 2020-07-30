@@ -37,4 +37,4 @@ let glitch = (): void => {
     }
 }
 
-export default glitch();
+// export default glitch();

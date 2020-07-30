@@ -8,7 +8,7 @@ let addGridItem = (): void => {
     let modalForm = document.querySelector('.modal form') as HTMLElement;
 
     if(modalForm){
-        let modalFormInputs = modalForm.querySelectorAll('input');
+        let modalFormInputs = Array.from(modalForm.querySelectorAll('input'));
 
         modalForm.addEventListener("submit", (e): void => {
             e.preventDefault();
@@ -93,6 +93,12 @@ let addGridItem = (): void => {
             function processedSubmitData() {
                 let newGame = new NewGameInfo(returnedValues[0], returnedValues[1], returnedValues[2], returnedValues[3], returnedValues[4]);
                 newGame.createGameItem();
+
+                returnedValues.forEach((item, index): void => {
+                    localStorage.setItem(`${"item " + index++}`, returnedValues[index]);
+                });
+
+                console.log(localStorage);
             }
 
             requestAnimationFrame(processedSubmitData);
